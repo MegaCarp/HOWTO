@@ -1,0 +1,29 @@
+﻿Ssh 
+
+https://support.brother.com/g/b/downloadlist.aspx?c=as_ot&lang=en&prod=mfc7360_as_cn&os=128
+
+самый первый файл, который все установит
+
+можно wget https://download.brother.com/welcome/dlf006893/linux-brprinter-installer-xxxxx.gz
+
+gunzip linux*
+
+su
+
+chmod +x linux*
+
+linux*
+
+MFC-7360
+
+# yes-yes-yes-URI=>AUTO
+
+ip — DHCP, зарезервируй статичный
+
+# i like to print to know for sure that it works :/
+
+# DONT FORGET
+
+$ brscan-skey
+
+

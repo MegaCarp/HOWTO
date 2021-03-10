@@ -1,0 +1,7 @@
+https://ostechnix.com/how-to-quickly-serve-files-and-folders-over-http-in-linux/
+
+apt install python
+
+cd /path/to/share
+
+python -m SimpleHTTPServer

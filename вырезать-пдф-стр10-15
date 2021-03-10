@@ -1,0 +1,2 @@
+pdftk A=источник.pdf cat A10-15 output стр10-15.pdf
+

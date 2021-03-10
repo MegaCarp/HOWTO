@@ -1,0 +1,3 @@
+﻿sudo mount -t vfat  /dev/sdf1 ~/mnt/ -o rw,umask=0000
+
+# fat32 by default can“t be chmodded to be rw, you have to mount it as such. Simple «-o rw» doesnt help, have to add umask=0000 for w/e reason

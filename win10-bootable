@@ -1,0 +1,12 @@
+﻿SOP:
+
+порт юсб2.0 — много чего не имеет драйверов юсб3, например биос, вин7 и тд
+
+
+
+
+# the problem and the solution: https://techbit.ca/2019/02/creating-a-bootable-windows-10-uefi-usb-drive-using-linux/
+
+# alternative, same, sauce to the above: https://win10.guru/usb-install-media-with-larger-than-4gb-wim-file/
+
+

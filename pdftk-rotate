@@ -1,0 +1,3 @@
+﻿pdftk тест3.pdf cat 1-endsouth output тест3-мод.pdf
+
+# заменить файл кажется нельзя

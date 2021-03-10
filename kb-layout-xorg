@@ -1,0 +1,16 @@
+#source
+# https://wiki.archlinux.org/index.php/Xorg/Keyboard_configuration#Using_setxkbmap
+
+
+localectl --no-convert set-x11-keymap us,ru pc104 grp:caps_toggle
+# have to restart x
+systemctl restart lightdm
+
+# rooted
+# kb has 104 buttons, us - default, ru - secondary, switch - caps
+# i think you first need proper locales for that: "dpkg-reconfigure locales" as root
+# editing .conf manually is a bad idea - localectl will eat that shit right up
+
+
+# to find possible options for switch pass:
+$ grep "grp:.*toggle" /usr/share/X11/xkb/rules/base.lst 

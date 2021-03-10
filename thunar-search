@@ -1,0 +1,20 @@
+﻿apt install catfish
+
+/home/stashko/.config/Thunar/uca*
+
+append BEFORE THE LAST LINE:
+
+<action>
+	<icon>system-search</icon>
+	<name>Найти...</name>
+	<unique-id>1426466013179488-2</unique-id>
+	<command>catfish --hidden --path=%f</command>
+	<description>Поиск файлов в папке</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+
+reload thunar
+
+admin has to launch it once to index the fs
