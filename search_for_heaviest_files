@@ -1,6 +1,7 @@
 # https://net2.com/how-to-find-the-largest-files-on-linux/
 
-find /home -type f -exec ls -s {} \; | sort -n | tail -n 5 
+### find /home -type f -exec ls -s {} \; | sort -n | tail -n 5 ## obsolete
+#TODO - salvage
 
 # This will find all files in the folder $DIRECTORY which undergo ls -s. The result is then sorted numerically via the sort command and finally, the last five entries are displayed.
 # To summarize, the command above will then display the largest 5 files in the folder /home
@@ -16,3 +17,6 @@ find /home -type f -exec ls -s {} \; | sort -n | tail -n 5
 # | sort -n | tail -n 5 should be at the end
 
 
+find / -type f -size +100M -print -exec ls -lh {} \; | sort -k5,5 -h -r | head
+
+# this one works better but possibly first could be salvaged for some parts?..
