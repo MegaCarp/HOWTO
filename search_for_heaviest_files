@@ -1,0 +1,18 @@
+# https://net2.com/how-to-find-the-largest-files-on-linux/
+
+find /home -type f -exec ls -s {} \; | sort -n | tail -n 5 
+
+# This will find all files in the folder $DIRECTORY which undergo ls -s. The result is then sorted numerically via the sort command and finally, the last five entries are displayed.
+# To summarize, the command above will then display the largest 5 files in the folder /home
+
+# you need root to go through home or /
+
+# things you have no right to observe won't go into the pipeline 
+
+# -xdev would keep the search to a single filesystem
+
+# | grep -v would add exclusions, i use them successively: | grep -v foo | grep -v also_foo
+
+# | sort -n | tail -n 5 should be at the end
+
+
