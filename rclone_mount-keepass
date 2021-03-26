@@ -1,0 +1,9 @@
+rclone config
+
+echo '#!/bin/bash' >  ~/.local/bin/rc_keepass.sh && echo 'rclone --vfs-cache-mode writes mount gdrive:keepass ~/Документы/keepass &' >> ~/.local/bin/rc_keepass.sh
+
+crontab -e
+
+@reboot sh ~/.local/bin/rc_keepass.sh
+
+
