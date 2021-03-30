@@ -13,8 +13,13 @@ cd ~/easy-rsa
 nano vars
 
 #this is what i use on ubuntu-home-pc
-###no idea what's in the set_var EASYRSA_ALGO, what's it for, what's "ec" but it's required
-###ditto for "REQ_OU", what's the "community" about...
+###no idea what's for "REQ_OU", what's the "community" about but it's required
+
+# algo ec stands for:
+# " [...] configuring for ECC means when a client and server attempt to establish a shared symmetric key, 
+# they can use Elliptic Curve algorithms to do their exchange. Using ECC for a key exchange is significantly faster 
+# than using plain Diffie-Hellman with the classic RSA algorithm since the numbers are much smaller and the computations are faster.
+
 set_var EASYRSA_REQ_COUNTRY    "RU"
 set_var EASYRSA_REQ_PROVINCE   "Moscow"
 set_var EASYRSA_REQ_CITY       "Moscow"
