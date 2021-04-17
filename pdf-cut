@@ -1,7 +1,14 @@
-﻿mkdir накладки-Пон && pdftoppm -jpeg -r 300 Накладки*.pdf накладки-Пон/img && tar -zvcf накладки.tar.gz накладки-Пон
+﻿
+    #!/bin/bash
+    # Ask the user for their name
+    echo название файла без разрешения?
+    read varname
+
+mkdir $varname && pdftoppm -jpeg -r 300 $varname.pdf $varname/img && tar -zvcf $varname.tar.gz $varname && thunderbird --compose
+# mkdir накладки-Пон && pdftoppm -jpeg -r 300 Накладки*.pdf накладки-Пон/img && tar -zvcf накладки.tar.gz накладки-Пон
 
 # сделать папку-засрапку, разбить пдф в эту папку с префиксом «имг», заархивировать папку
 
-rm -r *аклад*
+# rm -r $varname*
 
 # удалить все папку, файл, архив
