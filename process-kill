@@ -1,0 +1,17 @@
+# https://www.linux.com/training-tutorials/how-kill-process-command-line/
+
+# narrow it down with 
+
+ps aux | grep keepass
+
+# for example, the above would also find the script that is mounting with rclone the keepass folder from gdrive. i'm unsure if killing "keepass"  would kill rclone also but it seems possible
+
+ps aux | grep keepassxc
+
+# this looks fine, usually I follow up with
+
+killall -9 keepassxc
+
+# if I actually want to be selective then it's
+
+kill -9 [PID_HERE]
