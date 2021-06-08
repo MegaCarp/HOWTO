@@ -3,6 +3,9 @@
 source_bills=~/Загрузки/Список.mxl.txt 
 all_bills=~/Документы/all_bills
 
+source_morev_report=
+
+
 echo "" >> $all_bills
 date >> $all_bills
 
