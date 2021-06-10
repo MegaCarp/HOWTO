@@ -13,5 +13,6 @@ date >> $all_bills
 echo Велинецкий | tee -a $all_bills
 cat $source_bills | grep Велинецкий | wc -l | tee -a $all_bills
 cat $source_bills | grep Велинецкий | sed  's/,.*//g' | sed 's/[^[:alnum:]]\+//g' | paste -sd+ - | bc | tee -a $all_bills
-
+# needed?:
+# printf '\n\n'
 
