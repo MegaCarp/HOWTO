@@ -1,0 +1,1 @@
+sed -i '/HandleLidSwitch=/c\HandleLidSwitch=ignore' /etc/systemd/logind.conf
