@@ -1,6 +1,14 @@
 rclone config
 
-echo '#!/bin/bash' >  ~/.local/bin/rc_keepass.sh && echo 'rclone --vfs-cache-mode writes mount gdrive:keepass ~/Документы/keepass &' >> ~/.local/bin/rc_keepass.sh
+sudo apt install rclone keepassxc -y
+
+mkdir ~/.local/bin/ && mkdir ~/Документы/keepass
+
+echo 'gdrive - 12 - no inputs'
+
+rclone config 
+
+echo '#!/bin/bash' >  ~/.local/bin/rc_keepass.sh && echo 'rclone --vfs-cache-mode writes mount gdrive:keepass ~/Документы/keepass &' >> ~/.local/bin/rc_keepass.sh && sudo chmod +x ~/.local/bin/rc_keepass.sh
 
 crontab -e
 
