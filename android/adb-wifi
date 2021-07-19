@@ -1,0 +1,13 @@
+# obviously the devices need to be on the same wifi
+# connect android device to pc 
+# first time between devices - diddle around until "usb debugging" dialog happens - accept it "forever" 
+# check the device appeared for pc:
+
+adb devices
+
+# then engage it in wifi mode using the script
+
+chmod +x android/wifi-connect.sh
+./android/wifi-connect.sh
+
+#5555 is the default port - take care if you connect more than one

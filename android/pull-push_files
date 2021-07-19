@@ -1,0 +1,17 @@
+adb devices
+#connect to the device name
+adb connect 
+
+# you have an apk file - lets install it:
+adb install sideload.apk
+
+# without rooot you cannot pull push to emulated memory - work with sd card, it's usually enough for usb-flash-like tasks
+# here's how you search for stuff
+
+adb shell 'ls'
+ls storage/9016-4EF8
+
+#etc
+adb pull storage/9016-4EF8/Documents/Personal.key
+
+adb push Magisk-uninstaller-20170813.zip storage/9016-4EF8/Download
