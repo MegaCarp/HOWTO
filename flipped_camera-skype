@@ -1,0 +1,21 @@
+# debian amd64 on i369 cpu
+
+apt install skypeforlunux
+
+# change all launcher
+# all - meaning delete all from desktop,from panel etc
+# then change the launcher in menulibre (have to install that :
+
+apt install menulibre
+
+# you have to find the library (driver?) that will adjust the webcam
+
+find /usr/lib -name libv4l2convert.so
+
+# then change the launcher using the path to the file like so :
+
+env LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libv4l/v4l2convert.so" /usr/bin/skypeforlinux %U
+
+# take care! by default there's anothr launcher in autolaunch (menu session*)
+# change it also, or the change basically won't take
+# you can then copy launcher to panel, desktop etc
