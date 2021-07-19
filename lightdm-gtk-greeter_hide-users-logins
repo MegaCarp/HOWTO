@@ -1,0 +1,9 @@
+# rooted
+lightdm --show-config
+
+# you'll see a bunch of files, idk their prio so I just changed the both of mine. [] section is important!
+# here is what you need to have: 
+
+[Seat:*]
+greeter-hide-users=false
+
