@@ -1,0 +1,49 @@
+torrent from:
+https://rutracker.org/forum/viewtopic.php?t=5360039
+траблшут с колокольни ubuntu 20.04
+
+./start.sh
+
+показывает, что нет библиотек: 
+
+libcrypto.so.1.0.0 => not found
+	libssl.so.1.0.0 => not found
+	libcrypto.so.1.0.0 => not found
+	libgconf-2.so.4 => not found
+
+гугл нам подсказывает, что libgconf-2.so.4 устанавливается sudo apt install libgconf-2-4
+
+остальные библиотеки - это 
+https://packages.debian.org/jessie/libssl1.0.0
+и
+https://packages.debian.org/jessie/libcrypto1.0.0-udeb
+
+там надо выбрать amd64 и дальше выбрать зеркало фтп для скачки (т.е. любое)
+
+.deb пакеты эти я не устанавливал (есть шанс, что система начнет ломаться), я распаковал их, распаковал data.tar.gz, нашел там недостающие библиотеки, скопировал их в [папку хитмен]/lib/x86_64
+
+дальше по идее надо было бы донастраивать скрипт start.sh, но в данном случае он уже на это настроен (инструкция для общего развития: https://www.gog.com/forum/mable_the_wood/libcryptoso100_not_found_on_ubuntu) ПОВТОРЯЮ: не надо ничего менять в start.sh - он УЖЕ настроен как написано в инструкции!
+
+есть шанс, что у меня уже были установленны заранее какие-то библиотеки, которых может не быть у вас - гугл неплохо указывает где их найти
+
+пока копался, поменял в скрипте язык на английский, это замена строк:
+
+case $LANGUAGE in
+        ru_RU)
+            USELANG=russian
+            ;;
+        *)
+            USELANG=english
+            ;;
+
+на строки:
+
+case $LANGUAGE in
+        en_US)
+            USELANG=english
+            ;;
+        *)
+            USELANG=english
+            ;;
+
+я не знаю, кстати, влияет ли это, но точно не ломает. 
